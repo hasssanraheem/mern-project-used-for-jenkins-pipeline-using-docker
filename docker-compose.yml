@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    mem_limit: 400m
+
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: always
+    ports:
+      - "2000:2000"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/productDB
+    depends_on:
+      - mongodb
+    mem_limit: 200m
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    environment:
+      - CI=false
+      - NODE_OPTIONS=--max-old-space-size=512
+    depends_on:
+      - backend
+    mem_limit: 800m
+
+volumes:
+  mongo_data:
+    driver: local
