@@ -7,7 +7,11 @@ var multer = require('multer'),
   bodyParser = require('body-parser'),
   path = require('path');
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/productDB");
+mongoose.connect(process.env.MONGO_URL || "mongodb://mongodb:27017/productDB").then(() => {
+  console.log("MongoDB Connected!");
+}).catch((err) => {
+  console.log("MongoDB Error: ", err);
+});
 var fs = require('fs');
 var product = require("./model/product.js");
 var user = require("./model/user.js");
