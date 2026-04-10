@@ -6,7 +6,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/hasssanraheem/registration-and-login-application-with-crud-operation-using-MERN-stack.git'
+                    url: 'https://github.com/hmarwat50/mern-project-used-for-jenkins-pipeline-using-docker.git'
             }
         }
 
