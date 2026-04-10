@@ -6,10 +6,11 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/hmarwaurl: 'https://github.com/hasssanraheem/mern-project-used-for-jenkins-pipeline-using-docker.git'
+                    url: 'https://github.com/hasssanraheem/mern-project-used-for-jenkins-pipeline-using-docker.git'
+            }
         }
 
-        stage('Build & Deploy with Docker') {
+        stage('Build and Deploy with Docker') {
             steps {
                 sh 'docker-compose -f docker-compose.jenkins.yml down || true'
                 sh 'docker-compose -f docker-compose.jenkins.yml up -d'
