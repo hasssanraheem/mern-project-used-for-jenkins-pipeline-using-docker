@@ -52,7 +52,7 @@ To run react frontend
 ### Product Add and Edit screen
 [![add](https://github.com/FSojitra/Registration-Login-and-CRUD-Action-using-MERN-stack/blob/master/add.png)](https://github.com/FSojitra/Registration-Login-and-CRUD-Action-using-MERN-stack/blob/master/add.png)  [![edit](https://github.com/FSojitra/Registration-Login-and-CRUD-Action-using-MERN-stack/blob/master/edit.png)](https://github.com/FSojitra/Registration-Login-and-CRUD-Action-using-MERN-stack/blob/master/edit.png)
 
-### Product Pagination screen
+### Product Pagination screen.
 [![dashboard](https://github.com/FSojitra/Registration-Login-and-CRUD-Action-using-MERN-stack/blob/master/dashboard.png)](https://github.com/FSojitra/Registration-Login-and-CRUD-Action-using-MERN-stack/blob/master/dashboard.png) -->
 
 ## Contributing
